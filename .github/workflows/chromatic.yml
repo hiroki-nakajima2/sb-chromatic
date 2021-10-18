@@ -2,9 +2,7 @@
 name: 'Chromatic Deployment'
 
 # Event for the workflow
-on: 
-  pullrequest
-  - master
+on: pullrequest
 
 # List of jobs
 jobs:
