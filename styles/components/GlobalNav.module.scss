@@ -1,0 +1,37 @@
+$image_path: '../../public/images';
+$icon_name: home, meating, ajenda, record, todo, setting, user;
+.nav {
+  display: grid;
+  align-content: space-between;
+  padding: 55px 0 8px;
+  background:
+    #007660
+    url(#{$image_path}/nav/logo.png)
+    no-repeat center top / 70px 55px
+  ;
+  .main,
+  .sub {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 55px;
+    > li {
+      > a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: var(--bg-green);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 70px 55px;
+        &:hover {
+          background-color: #44c0a7;
+        }
+        @each $n in $icon_name {
+          &.#{$n} {
+            background-image: url(#{$image_path}/nav/#{$n}.png);
+          }
+        }
+      }
+    }
+  }
+}

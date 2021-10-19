@@ -1,5 +1,5 @@
 //import React from 'react'
-import style from '../styles/components/LinkButton.module.scss'
+import style from '@/styles/components/LinkButton.module.scss'
 
 type props = {
   name?: string

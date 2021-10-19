@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
   "stories": [
     "../stories/**/*.stories.mdx",
@@ -9,6 +11,10 @@ module.exports = {
     "@storybook/addon-essentials"
   ],
   webpackFinal: async (baseConfig) => {
+    baseConfig.resolve.alias = {
+      ...baseConfig.resolve.alias,
+      '@': path.resolve(__dirname, '../'),
+    };
     baseConfig.module.rules.push({
       test: /\.scss$/,
       use: [

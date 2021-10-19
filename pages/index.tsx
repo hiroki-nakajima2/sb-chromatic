@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.scss'
 import LinkButton from '../components/LinkButton'
+import GlobalNav from '../components/GlobalNav'
 
 const Home: NextPage = () => {
   return (
@@ -55,6 +56,7 @@ const Home: NextPage = () => {
       </main>
 
       <LinkButton />
+      <GlobalNav />
 
       <footer className={styles.footer}>
         <a
