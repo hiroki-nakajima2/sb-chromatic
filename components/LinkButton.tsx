@@ -8,7 +8,7 @@ type props = {
 const LinkButton = ({name = 'link_button'}:props) => {
   console.log(name)
   return (
-    <a className={style[name]}>upload</a>
+    <a className={style[name]}>アップロード￥</a>
   )
 }
 
